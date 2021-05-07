@@ -1,0 +1,31 @@
+{
+  "name": "socket.io-cloud-upload-server",
+  "version": "1.0.0",
+  "description": "Upload files using socket.io and store details to database",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/izetmolla/socket.io-cloud-upload-server.git"
+  },
+  "keywords": [
+    "socket.io",
+    "fileupload",
+    "upload"
+  ],
+  "author": "Izet Molla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izetmolla/socket.io-cloud-upload-server/issues"
+  },
+  "homepage": "https://github.com/izetmolla/socket.io-cloud-upload-server#readme",
+  "dependencies": {
+    "mime": "^2.5.2"
+  },
+  "devDependencies": {
+    "socket.io": "^4.0.2"
+  }
+}
