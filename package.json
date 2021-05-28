@@ -1,6 +1,6 @@
 {
   "name": "socket.io-cloud-upload-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Upload files using socket.io and store details to database",
   "main": "index.js",
   "types": "index.d.ts",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/izetmolla/socket.io-cloud-upload-server#readme",
   "dependencies": {
+    "image-size": "^1.0.0",
     "mime": "^2.5.2"
   },
   "devDependencies": {

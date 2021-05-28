@@ -114,7 +114,9 @@ function SocketIOFileCloud(socket, options) {
             obj_toDb: cloud_details.length > 0 ? {
                 cloud_id: cloud_details[0].id,
                 filename,
-                member_id: this.database.member_id ? this.database.member_id : null
+                member_id: this.database.member_id ? this.database.member_id : null,
+                // file_details: getFileDetails(mimeType, uploadDir)
+                file_details: { new: true }
             } : {}
         };
 
@@ -150,7 +152,8 @@ function SocketIOFileCloud(socket, options) {
                     cloud_id: cloud_details ? cloud_details[0].id : null,
                     file_created: Date.now(),
                     file_name: id + '_' + (this.database.member_id ? this.database.member_id + '_' : '') + filename,
-                    member_id: this.database.member_id ? this.database.member_id : null
+                    member_id: this.database.member_id ? this.database.member_id : null,
+                    file_details: getFileDetails(mimeType, uploadingFiles[id].uploadDir)
                 }
 
             };

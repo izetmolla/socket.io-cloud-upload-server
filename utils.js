@@ -1,6 +1,7 @@
 "use strict";
 const fs = require('fs');
 const path = require('path');
+const sizeOf = require('image-size')
 
 function mkdirSyncRecursively(dir, mode) {
     try {
@@ -24,7 +25,17 @@ function createDirectoryIfNotExists(dir) {
     }
 }
 
+function getFileDetails(mime, file) {
+    console.log({ mime, file })
+    if (mime === "image") {
+        return sizeOf(file)
+    } else {
+        return {}
+    }
+}
+
 module.exports = {
     mkdirSyncRecursively: mkdirSyncRecursively,
-    createDirectoryIfNotExists: createDirectoryIfNotExists
+    createDirectoryIfNotExists: createDirectoryIfNotExists,
+    getFileDetails: getFileDetails,
 };
