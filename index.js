@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const mime = require('mime');
 const createDirectoryIfNotExists = require('./utils').createDirectoryIfNotExists;
+const getFileDetails = require('./utils').getFileDetails;
 
 function SocketIOFileCloud(socket, options) {
     if (!socket) {
