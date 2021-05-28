@@ -26,8 +26,8 @@ function createDirectoryIfNotExists(dir) {
 }
 
 function getFileDetails(mime, file) {
-    console.log({ mime, file })
-    if (mime === "image") {
+    if (mime.split("/")[0] === "image") {
+        console.log(sizeOf(file))
         return sizeOf(file)
     } else {
         return {}
